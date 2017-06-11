@@ -1,4 +1,4 @@
-package com.ja0ck5.provider.springbootprovideruser;
+package com.ja0ck5.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
