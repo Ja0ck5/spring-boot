@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ja0ck5</groupId>
-	<artifactId>boot1</artifactId>
+	<artifactId>spring-boot-practice-demo1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
