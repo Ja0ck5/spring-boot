@@ -12,6 +12,7 @@
 		<module>spring-boot-provider-user</module>
 		<module>spring-boot-consumer-movies</module>
 		<module>spring-cloud-micro-discovery</module>
+		<module>spring-boot-practice-demo1</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
