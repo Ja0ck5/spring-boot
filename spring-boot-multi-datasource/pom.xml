@@ -9,7 +9,7 @@
 	</parent>
 
 	<groupId>com.ja0ck5</groupId>
-	<artifactId>multi-datasource</artifactId>
+	<artifactId>spring-boot-multi-datasource</artifactId>
 	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
