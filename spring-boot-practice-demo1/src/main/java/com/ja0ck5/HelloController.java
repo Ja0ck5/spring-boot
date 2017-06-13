@@ -1,6 +1,7 @@
 package com.ja0ck5;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,23 +12,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-//    @Value("${cupSize}")
-//    private String cupSize;
-//
-//    @Value("${age}")
-//    private int age;
-//
-//    @Value("${content}")
-//    private String content;
+	// @Value("${cupSize}")
+	// private String cupSize;
+	//
+	// @Value("${age}")
+	// private int age;
+	//
+	// @Value("${content}")
+	// private String content;
 
-    @Autowired
-    private GirlProperties girlProperties;
+	@Autowired
+	private GirlProperties girlProperties;
+	@Autowired
+	private BoyProperties boyProperties;
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String say() {
-//        System.out.println("cupSize: "+cupSize+ ",age="+age);
-//        System.out.println(content);
+	@GetMapping("/girl")
+	public String girl() {
+		return girlProperties.getCupSize();
+	}
 
-        return girlProperties.getCupSize();
-    }
+	@GetMapping("/boy")
+	public String boy() {
+		return boyProperties.getCupSize();
+	}
 }

@@ -1,7 +1,7 @@
 server:
-  port: 80
+  port: 8099
  # context-path: /boot1
-girl:
+boy:
   cupSize: F
   age: 18
   content: "cupSize: ${cupSize},age: ${age}"
