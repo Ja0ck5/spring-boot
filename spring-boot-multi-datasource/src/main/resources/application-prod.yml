@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    include:
+     - proddb
+     - testHomeRedis
+server:
+  port: 8093
+
