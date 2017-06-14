@@ -30,7 +30,7 @@ public class DataSourceConfiguration {
      */
     @Bean(name = "dataDatasource")
     @ConfigurationProperties(prefix = "spring.data-datasource")
-    public DataSource secondDataSource() {
+    public DataSource dataDatasource() {
         return DataSourceBuilder.create().build();
     }
 
@@ -47,7 +47,7 @@ public class DataSourceConfiguration {
      * Create second JdbcTemplate from second DataSource.
      */
     @Bean(name = "dataJdbcTemplate")
-    public JdbcTemplate secondJdbcTemplate(@Qualifier("dataDatasource") DataSource dataSource) {
+    public JdbcTemplate dataJdbcTemplate(@Qualifier("dataDatasource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 }

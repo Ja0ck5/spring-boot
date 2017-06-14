@@ -1,12 +1,12 @@
 spring:
   redis:
-    database: 3
+    name: home_redis
     host: 61.160.36.225
-    password: ojia_pay
+    pwd: ojia_pay
     port: 6398
     timeout: 0
-    pool:
-      max-idle: 10
-      max-active: 30
+    maxIdle: 10
+    maxTotal: 30
+    db: 3
 
 

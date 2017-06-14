@@ -1,6 +1,11 @@
 package com.ja0ck5.configuration;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
+import redis.clients.jedis.RedisProxy;
+import redis.clients.jedis.RedisProxyFactoryBean;
 
 import java.util.Properties;
 
@@ -11,10 +16,12 @@ import java.util.Properties;
 public class RedisProxyConfiguration {
 
 
-    public static void main(String[] args) {
-        Properties properties = new Properties();
+    @Bean
+    @Primary
+    @ConfigurationProperties(prefix = "spring.redis")
+    public RedisProxyFactoryBean primaryRedisProxyFactoryBean() throws Exception {
+        return new RedisProxyFactoryBean();
     }
-
 
 
 }
