@@ -1,0 +1,12 @@
+spring:
+  redis:
+    database: 3
+    host: 61.160.36.225
+    password: ojia_pay
+    port: 6398
+    timeout: 0
+    pool:
+      max-idle: 10
+      max-active: 30
+
+

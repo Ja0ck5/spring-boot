@@ -1,16 +1,9 @@
 spring:
   application:
     name: multi-datasource
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: 
-    username: 
-    password: 
-  data-datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: 
-    username: 
-    password: 
-
+  profiles:
+    active:
+     - prod
 server:
-  port: 80
+  port: 8092
+
