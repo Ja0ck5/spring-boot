@@ -1,10 +1,21 @@
 server:
   port: 8761
 
+# security
+security:
+  basic:
+    enabled: true
+  user:
+    name: ja0ck5
+    password: 123456
+
 eureka:
   client:
     # 只把 当前的 eureka 当成 server 不要当成 Client
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka # 将 eureka 注册到 具体的 url
+     # defaultZone: http://localhost:8761/eureka # 将 eureka 注册到 具体的 url
+      # authentication
+      defaultZone: http://ja0ck5:123456@localhost:8761/eureka
+
