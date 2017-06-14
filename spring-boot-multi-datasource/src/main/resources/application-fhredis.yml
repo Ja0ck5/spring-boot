@@ -1,4 +1,4 @@
-spring:
+fhvideo:
   redis:
     name: home_redis
     host: 61.160.36.225
@@ -8,5 +8,3 @@ spring:
     maxIdle: 10
     maxTotal: 30
     db: 3
-
-

@@ -15,11 +15,4 @@ public class SpringBootMultiDatasourceApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Autowired
-	RedisProxy homeRedis;
-	@Test
-	public void testRedis() {
-		System.out.println(homeRedis);
-	}
-
 }
