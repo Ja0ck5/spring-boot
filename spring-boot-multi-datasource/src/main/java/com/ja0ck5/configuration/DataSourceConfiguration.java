@@ -1,6 +1,8 @@
 package com.ja0ck5.configuration;
 
 import com.ja0ck5.model.RedisProxyFactoryBeans;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -16,6 +18,43 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class DataSourceConfiguration {
+//	/**
+//	 * Create primary (default) DataSource.
+//	 */
+//	@Bean
+//	@Primary
+//	@ConfigurationProperties(prefix = "spring.datasource")
+//	public DataSource primaryDataSource() {
+//		return DataSourceBuilder.create().build();
+//	}
+//
+//	/**
+//	 * Create second DataSource and named "dataDatasource".
+//	 */
+//	@Bean(name = "dataDatasource")
+//	@ConfigurationProperties(prefix = "spring.data-datasource")
+//	public DataSource dataDatasource() {
+//		return DataSourceBuilder.create().build();
+//	}
+//
+//	/**
+//	 * Create primary (default) JdbcTemplate from primary DataSource.
+//	 */
+//	@Bean
+//	@Primary
+//	public JdbcTemplate primaryJdbcTemplate(DataSource dataSource) {
+//		return new JdbcTemplate(dataSource);
+//	}
+//
+//	/**
+//	 * Create second JdbcTemplate from second DataSource.
+//	 */
+//	@Bean(name = "dataJdbcTemplate")
+//	public JdbcTemplate dataJdbcTemplate(@Qualifier("dataDatasource") DataSource dataSource) {
+//		return new JdbcTemplate(dataSource);
+//	}
+
+
 	/**
 	 * Create primary (default) DataSource.
 	 */
@@ -51,4 +90,5 @@ public class DataSourceConfiguration {
 	public JdbcTemplate dataJdbcTemplate(@Qualifier("dataDatasource") DataSource dataSource) {
 		return new JdbcTemplate(dataSource);
 	}
+
 }
