@@ -14,32 +14,7 @@ import redis.clients.jedis.RedisProxy;
 @Configuration
 public class RedisProxyConfiguration {
 
-//	@Bean
-//	@Primary
-//	@ConfigurationProperties(prefix = "fhvideo.redis.home")
-//	public RedisProxyFactoryBeans primaryRedisProxyFactoryBeans() throws Exception {
-//		return new RedisProxyFactoryBeans();
-//	}
-//
-//	@Bean
-//	@Primary
-//	public RedisProxy homeRedis(RedisProxyFactoryBeans redisProxyFactoryBeans) throws Exception {
-//		return redisProxyFactoryBeans.build();
-//	}
-//
-//	@Bean(name = "dataRedisProxyFactoryBeans")
-//	@ConfigurationProperties(prefix = "fhvideo.redis.data")
-//	public RedisProxyFactoryBeans dataRedisProxyFactoryBeans() throws Exception {
-//		return new RedisProxyFactoryBeans();
-//	}
-//
-//	@Bean(name = "dataRedis")
-//	public RedisProxy dataRedis(@Qualifier("dataRedisProxyFactoryBeans") RedisProxyFactoryBeans dataRedisProxyFactoryBeans) throws Exception {
-//		return dataRedisProxyFactoryBeans.build();
-//	}
-
-
-	@Bean(initMethod = "build",destroyMethod = "destroy")
+	@Bean
 	@Primary
 	@ConfigurationProperties(prefix = "fhvideo.redis.home")
 	public RedisProxyFactoryBeans primaryRedisProxyFactoryBeans() throws Exception {
@@ -49,10 +24,10 @@ public class RedisProxyConfiguration {
 	@Bean
 	@Primary
 	public RedisProxy homeRedis(RedisProxyFactoryBeans redisProxyFactoryBeans) throws Exception {
-		return redisProxyFactoryBeans.getObject();
+		return redisProxyFactoryBeans.build();
 	}
 
-	@Bean(name = "dataRedisProxyFactoryBeans",initMethod = "build", destroyMethod = "destroy")
+	@Bean(name = "dataRedisProxyFactoryBeans")
 	@ConfigurationProperties(prefix = "fhvideo.redis.data")
 	public RedisProxyFactoryBeans dataRedisProxyFactoryBeans() throws Exception {
 		return new RedisProxyFactoryBeans();
@@ -60,7 +35,7 @@ public class RedisProxyConfiguration {
 
 	@Bean(name = "dataRedis")
 	public RedisProxy dataRedis(@Qualifier("dataRedisProxyFactoryBeans") RedisProxyFactoryBeans dataRedisProxyFactoryBeans) throws Exception {
-		return dataRedisProxyFactoryBeans.getObject();
+		return dataRedisProxyFactoryBeans.build();
 	}
 
 }

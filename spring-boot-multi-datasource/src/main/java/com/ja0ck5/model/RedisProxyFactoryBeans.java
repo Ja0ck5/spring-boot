@@ -141,7 +141,7 @@ public class RedisProxyFactoryBeans {
 
 	}
 
-	public /*RedisProxy*/ RedisProxyFactoryBeans build() throws Exception {
+	public RedisProxy  build() throws Exception {
 		this.buildPool();
 		this.proxy = new RedisProxy(this.jedisPool, this.name, this.host, this.port, this.pwd);
 		if (null != this.monitorThread) {
@@ -153,8 +153,7 @@ public class RedisProxyFactoryBeans {
 		} else {
 			this.monitorThread = null;
 		}
-//		return this.proxy;
-		return this;
+		return this.proxy;
 	}
 
 	private void buildPool() {
@@ -182,13 +181,13 @@ public class RedisProxyFactoryBeans {
 	 */
 	private boolean validate() {
 		boolean flag = false;
-		if (null != properties) {
+		if (null != this.properties) {
 			this.settings();
 			flag = true;
 			return flag;
 		}
 
-		if (StringUtils.isNotBlank(this.host) || port > 0) {
+		if (StringUtils.isNotBlank(this.host) && port > 0) {
 			flag = true;
 		}
 
