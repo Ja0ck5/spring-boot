@@ -89,11 +89,11 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>com.ojia.base</groupId>
 			<artifactId>java-base</artifactId>
 			<version>1.0</version>
-		</dependency>
+		</dependency>-->
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>

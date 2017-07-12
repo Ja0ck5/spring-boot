@@ -11,6 +11,9 @@ security:
 
 eureka:
   client:
+    # EurekaDiscoveryClientConfiguration 源码中可以找到配置。ide 没有提示
+    healthcheck:
+      enabled: true
     # 只把 当前的 eureka 当成 server 不要当成 Client
     register-with-eureka: false
     fetch-registry: false
