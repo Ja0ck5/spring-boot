@@ -15,21 +15,7 @@
  */
 package com.ja0ck5.model;
 
-import static org.apache.commons.lang3.StringUtils.*;
-import static org.elasticsearch.common.settings.ImmutableSettings.settingsBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.elasticsearch.client.transport.TransportClient;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.InetSocketTransportAddress;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.util.Assert;
 
 /**
  * TransportClientFactoryBean
@@ -39,7 +25,7 @@ import org.springframework.util.Assert;
  * @author Jakub Vavrik
  * @author Piotr Betkier
  */
-public class TransportClientFactoryBean {
+/*public class TransportClientFactoryBean {
 
 	private static final Logger logger = LoggerFactory.getLogger(TransportClientFactoryBean.class);
 	private String clusterNodes = "61.160.36.225:9310";
@@ -231,11 +217,11 @@ public class TransportClientFactoryBean {
 		this.properties = properties;
 	}
 
-	/**
+	*//**
 	 * @param propertiesPath
 	 *            the {@link #setPropertiesPath} to set
 	 * @throws IOException
-	 */
+	 *//*
 	public void setPropertiesPath(String propertiesPath) throws IOException {
 		if (StringUtils.isNotBlank(propertiesPath)) {
 			InputStream input = getClass().getClassLoader().getResourceAsStream(propertiesPath);
@@ -244,4 +230,4 @@ public class TransportClientFactoryBean {
 			IOUtils.closeQuietly(input);
 		}
 	}
-}
+}*/

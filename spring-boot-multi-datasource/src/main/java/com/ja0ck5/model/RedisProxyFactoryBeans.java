@@ -2,6 +2,7 @@
 // Source code recreated from a .class file by IntelliJ IDEA
 // (powered by Fernflower decompiler)
 //
+/*
 package com.ja0ck5.model;
 
 import java.io.IOException;
@@ -174,11 +175,13 @@ public class RedisProxyFactoryBeans {
 
 	}
 
-	/**
+	*/
+/**
 	 * TODO 校验属性
-	 * 
+	 *
 	 * @return
-	 */
+	 *//*
+
 	private boolean validate() {
 		boolean flag = false;
 		if(null != this.properties) {
@@ -237,3 +240,4 @@ public class RedisProxyFactoryBeans {
 
 	}
 }
+*/

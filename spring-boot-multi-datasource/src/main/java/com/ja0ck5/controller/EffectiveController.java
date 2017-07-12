@@ -1,3 +1,4 @@
+/*
 package com.ja0ck5.controller;
 
 import com.ja0ck5.model.RedisProxyFactoryBeans;
@@ -11,11 +12,13 @@ import com.ja0ck5.dao.EffectiveRecordDao;
 import com.ja0ck5.model.EffectiveRecord;
 import redis.clients.jedis.RedisProxy;
 
+*/
 /**
  * User service which uses primary data source.
  * 
  * @author Michael Liao
- */
+ *//*
+
 @RestController
 public class EffectiveController {
 
@@ -53,3 +56,4 @@ public class EffectiveController {
 	}
 
 }
+*/

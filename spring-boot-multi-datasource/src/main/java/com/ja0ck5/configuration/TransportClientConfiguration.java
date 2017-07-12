@@ -1,3 +1,4 @@
+/*
 package com.ja0ck5.configuration;
 
 import com.ja0ck5.model.TransportClientFactoryBean;
@@ -7,9 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+*/
 /**
  * Created by Jack on 2017/7/12.
- */
+ *//*
+
 @Configuration
 public class TransportClientConfiguration {
 
@@ -27,3 +30,4 @@ public class TransportClientConfiguration {
     }
 
 }
+*/

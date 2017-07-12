@@ -1,3 +1,4 @@
+/*
 package com.ja0ck5.configuration;
 
 import com.ja0ck5.model.RedisProxyFactoryBeans;
@@ -8,9 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import redis.clients.jedis.RedisProxy;
 
+*/
 /**
  * Created by Jack on 2017/6/13.
- */
+ *//*
+
 @Configuration
 public class RedisProxyConfiguration {
 
@@ -39,3 +42,4 @@ public class RedisProxyConfiguration {
 	}
 
 }
+*/
