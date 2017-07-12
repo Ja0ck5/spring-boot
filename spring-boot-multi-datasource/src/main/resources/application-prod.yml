@@ -3,6 +3,7 @@ spring:
     include:
      - proddb
      - fhredis
+     - es
 server:
   port: 8093
 

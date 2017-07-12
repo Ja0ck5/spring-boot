@@ -158,7 +158,7 @@ public class RedisProxyFactoryBeans {
 
 	private void buildPool() {
 		// 校验
-		if (!validate()) {
+		if (this.validate()) {
 			return;
 		}
 		JedisPoolConfig config = new JedisPoolConfig();
@@ -181,13 +181,10 @@ public class RedisProxyFactoryBeans {
 	 */
 	private boolean validate() {
 		boolean flag = false;
-		if (null != this.properties) {
+		if(null != this.properties) {
 			this.settings();
 			flag = true;
-			return flag;
-		}
-
-		if (StringUtils.isNotBlank(this.host) && port > 0) {
+		} else if(org.apache.commons.lang3.StringUtils.isNotBlank(this.host) && this.port > 0) {
 			flag = true;
 		}
 
