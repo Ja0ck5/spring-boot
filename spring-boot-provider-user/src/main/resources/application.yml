@@ -14,7 +14,7 @@ spring:
     data:
     - classpath:data.sql
   application:
-    name: micro-user
+    name: micro-service-provider-user
 logging:
   level:
     root: info
